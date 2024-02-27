@@ -1,4 +1,4 @@
-package homeworks.Day03;
+package homeworks.day03;
 
 import org.junit.After;
 import org.junit.BeforeClass;

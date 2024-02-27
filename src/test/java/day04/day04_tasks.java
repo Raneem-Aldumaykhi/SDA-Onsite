@@ -25,6 +25,7 @@ WebDriver driver;
         driver.get("http://the-internet.herokuapp.com/add_remove_elements/");
         createButtons(100);
 
+
     }
 
     public void createButtons(int numberOfButtons){
@@ -33,5 +34,7 @@ WebDriver driver;
         for (int i=0 ;i<numberOfButtons;i++){
             button.click();
         }
+
+        
     }
 }
