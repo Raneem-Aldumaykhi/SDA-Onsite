@@ -51,7 +51,7 @@ public class Task2 {
            select.selectByVisibleText("Magenta");
 
         //  Select an option using value.
-            select.deselectByValue("2");
+            select.selectByValue("2");
     }
 
 }
