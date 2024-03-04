@@ -3,7 +3,7 @@ package homeworks.day08;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import utilities.TestBase
+import utilities.TestBase;
 import utilities.TestBase;
 
 public class Task2 extends TestBase {
@@ -38,4 +38,5 @@ public class Task2 extends TestBase {
 
         // Verify the title: "The Internet"
         Assert.assertEquals("Current Window Title is incorrect", "The Internet", driver.getTitle());
+    }
 }
