@@ -6,7 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
 
-public class C03 extends TestBase {
+
+
+public class C03ActionsClass02 extends TestBase {
 
    // Go to URL: http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html
     //Fill in capitals by country.
@@ -39,9 +41,32 @@ public class C03 extends TestBase {
                 .dragAndDrop(Stockholm,Sweden)
                 .dragAndDrop(Washington,United_States)
                 .dragAndDrop(Copenhagen,Denmark)
-                .dragAndDrop(Madrid,Spain).perform();
+                .dragAndDrop(Madrid,Spain).perform();}
+
+        String url = "http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html";
+        @Test
+        public void test2(){
+
+            driver.get(url);
+            dragCapitolInCountryBox("Madrid","Spain");
+            dragCapitolInCountryBox("Washington","United States");
+            dragCapitolInCountryBox("Rome","Italy");
+            dragCapitolInCountryBox("Seoul","South Korea");
+            dragCapitolInCountryBox("Copenhagen","Denmark");
+            dragCapitolInCountryBox("Oslo","Norway");
+            dragCapitolInCountryBox("Stockholm","Sweden");
+
+        }
+        public void dragCapitolInCountryBox(String capital, String country){
+            By cap = By.xpath("//div[text()='"+ capital +"'][2]");
+            By count = By.xpath("//div[text()='"+country+"']");
+
+            WebElement capitalBox = driver.findElement(cap);
+            WebElement countryBox = driver.findElement(count);
+            actions.dragAndDrop(capitalBox,countryBox).perform();
+        }
 
 
 
     }
-}
+

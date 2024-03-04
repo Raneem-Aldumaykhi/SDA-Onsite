@@ -5,7 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
 
-public class C06 extends TestBase {
+public class C06Scrolling extends TestBase {
 
 
         //Go to URL: https://www.amazon.com/
