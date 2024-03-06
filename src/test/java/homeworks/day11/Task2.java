@@ -14,7 +14,7 @@ public class Task2 extends TestBase {
         System.out.println("sepertor = " + sepertor);
 
 
-        String path =user + sepertor + "OneDrive\\سطح المكتب\\Pass.docx";
+        String path =user + sepertor + "OneDrive"+sepertor+"سطح المكتب"+sepertor+"Pass.docx";
 
         System.out.println("path = " + path);
         boolean isExists = Files.exists(Path.of(path));
