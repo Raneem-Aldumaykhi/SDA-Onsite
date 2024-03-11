@@ -15,6 +15,7 @@ public class java6 {
         }
 
         scanner.close();
+        System.out.println("the end ...................");
     }
 
     public static boolean isPalindrome(String str) {
@@ -41,6 +42,7 @@ public class java6 {
 
         // If the loop completes, the string is a palindrome
         return true;
+
     }
 }
 
