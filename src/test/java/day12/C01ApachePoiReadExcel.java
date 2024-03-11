@@ -65,9 +65,10 @@ public class C01ApachePoiReadExcel extends TestBase {
         Cell cell21 =row2.getCell(0);
         System.out.println("cell21 = " + cell21);
         Assert.assertEquals("Russia",cell21.toString());
+        System.out.println("---------------------------------");
 
 
-        // Go to the 3rd row and print the 2nd cell.
+        // Go to the 3rd row and print the 2nd cell...
         Row row3 =sheet1.getRow(2);
         Cell cell32 =row3.getCell(1);
         System.out.println("cell32 = " + cell32);

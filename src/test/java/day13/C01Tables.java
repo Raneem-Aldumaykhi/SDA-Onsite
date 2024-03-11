@@ -20,9 +20,8 @@ public class C01Tables extends TestBase {
         WebElement thirdRow2 = thirdRow.findElement(By.xpath(".//td[2]"));
         System.out.println("thirdRow2 = " + thirdRow2.getText());
 
-        //Get all the values of a Dynamic Table
-        List<WebElement> rows = driver.findElements(By.xpath("//*[@id=\"leftcontainer\"]/table/tbody/tr"));
-        for (WebElement row : rows) {
+        //Get all the values of a Dynamic Table (for each loop)
+        /*for (WebElement row : rows) {
             // Find all columns in each row
             List<WebElement> columns = row.findElements(By.tagName("td"));
 
@@ -31,8 +30,20 @@ public class C01Tables extends TestBase {
                 // Print the text of each column
                 System.out.print(column.getText() + "\t");
             }
-            System.out.println();
+            System.out.println();*/
 
+//for loop
+        List<WebElement> rows = driver.findElements(By.xpath("//*[@id=\"leftcontainer\"]/table/tbody/tr"));
+        for (int i = 0; i < rows.size(); i++) {
+            WebElement row = rows.get(i);
+            List<WebElement> columns = row.findElements(By.tagName("td"));
+
+            for (int j = 0; j < columns.size(); j++) {
+                WebElement column = columns.get(j);
+                System.out.print(column.getText() + "\t");
+            }
+            System.out.println();
         }
     }
 }
+
